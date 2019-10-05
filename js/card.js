@@ -8,6 +8,8 @@ const renderCard = ({ deck, side, card }) => {
   const text = side === 'a' ? correctCard.sideA : correctCard.sideB;
 
   const oppositeSide = side === 'a' ? 'b' : 'a';
+  const previousCard = card == 0 ? cards.length - 1 : card - 1;
+  const nextCard = card == cards.length - 1 ? 0 : card + 1;
 
   const content = document.getElementById('content');
 
@@ -22,7 +24,7 @@ const renderCard = ({ deck, side, card }) => {
   row.appendChild(col);
 
   const cardElem = document.createElement('div');
-  cardElem.className = 'card';
+  cardElem.className = 'card large';
 
   col.appendChild(cardElem);
 
@@ -48,11 +50,28 @@ const renderCard = ({ deck, side, card }) => {
   const flipLink = document.createElement('a');
   flipLink.href = `/?deck=${deck}&side=${oppositeSide}&card=${card}`;
 
-  action.appendChild(flipLink);
-
   flipLink.appendChild(
     document.createTextNode('Flip')
   );
+
+  const previousLink = document.createElement('a');
+  previousLink.href = `/?deck=${deck}&side=a&card=${previousCard}`;
+
+  previousLink.appendChild(
+    document.createTextNode('Previous')
+  );
+
+  const nextLink = document.createElement('a');
+  nextLink.href = `/?deck=${deck}&side=a&card=${nextCard}`;
+
+  nextLink.appendChild(
+    document.createTextNode('Next')
+  );
+
+  action.appendChild(previousLink);
+  action.appendChild(flipLink);
+  action.appendChild(nextLink);
+
 };
 
 export { renderCard };
