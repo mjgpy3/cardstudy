@@ -19,7 +19,7 @@ const renderCard = ({ deck, side, card }) => {
   content.appendChild(row);
 
   const col = document.createElement('div');
-  col.className = 'col s12 m3';
+  col.className = 'col s12 m12';
 
   row.appendChild(col);
 
