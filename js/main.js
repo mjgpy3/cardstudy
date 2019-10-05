@@ -47,7 +47,7 @@ const renderDeckList = () => {
     content.appendChild(body);
 
     const actionLink = document.createElement('a');
-    actionLink.href = `/deck=${deck.name}`;
+    actionLink.href = `/?deck=${deck.name}`;
 
     action.appendChild(actionLink);
 
