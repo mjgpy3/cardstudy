@@ -1,0 +1,15 @@
+{
+  "name": "cardstudy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "parcel": "^1.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "parcel build --public-url dist index.html",
+    "build:content": "./bin/dhall-to-json --file ./content/decks.dhall > ./js/decks.json"
+  },
+  "author": ""
+}
