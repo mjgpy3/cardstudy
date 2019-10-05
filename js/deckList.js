@@ -1,7 +1,7 @@
 import decks from './decks.json';
 
 const renderDeckList = () => {
-  const deckList = document.getElementById('deck-list');
+  const deckList = document.getElementById('content');
 
   const row = document.createElement('div');
   row.className = 'row';
