@@ -24,7 +24,7 @@ const renderCard = ({ deck, side, card }) => {
   const cardElem = document.createElement('div');
   cardElem.className = 'card';
 
-  col.appendChild(card);
+  col.appendChild(cardElem);
 
   const cardContent = document.createElement('div');
   cardContent.className = 'card-content';
