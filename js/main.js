@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', event => {
       deck: queryParams['deck'],
       side: queryParams['side'],
       card: parseInt(queryParams['card']),
-      mode: queryParams['shuffled']
+      mode: queryParams['mode']
     });
   } else if ('mode' in queryParams && queryParams['mode'] === 'shuffled') {
     renderShuffledCard({
