@@ -1,6 +1,6 @@
 import decks from './decks.json';
 import { renderDeckList } from './deckList';
-import { renderCard, renderRandomCard } from './card';
+import { renderCard, renderShuffledCard } from './card';
 
 window.addEventListener('DOMContentLoaded', event => {
   const pieces = window.location.href.split('?');
