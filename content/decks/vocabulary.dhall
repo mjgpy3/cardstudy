@@ -1,5 +1,4 @@
 let Deck = ../types/Deck.dhall
-let Card = ../types/Card.dhall
 let deck : Deck = {
   name = "Vocabulary",
   sideA = "Word",
