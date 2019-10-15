@@ -1,6 +1,17 @@
 import decks from './decks.json';
 
-const renderCard = ({ deck, side, card }) => {
+const renderShuffledCard  = ({ deck }) => {
+  const [{ cards }] = decks.filter(({ name }) => name === deck);
+
+  renderCard({
+    deck,
+    side: 'a',
+    card: Math.floor(Math.random() * cards.length),
+    mode: 'shuffled'
+  });
+}
+
+const renderCard = ({ deck, side, card, mode }) => {
   const [{ cards }] = decks.filter(({ name }) => name === deck);
 
   const correctCard = cards[card];
@@ -48,7 +59,10 @@ const renderCard = ({ deck, side, card }) => {
   cardContent.appendChild(title);
 
   const flipLink = document.createElement('a');
-  flipLink.href = `/?deck=${deck}&side=${oppositeSide}&card=${card}`;
+  flipLink.href =
+    mode === 'shuffled'
+      ? `/?deck=${deck}&side=${oppositeSide}&card=${card}&mode=shuffled`
+      : `/?deck=${deck}&side=${oppositeSide}&card=${card}`;
 
   flipLink.appendChild(
     document.createTextNode('Flip')
@@ -57,12 +71,17 @@ const renderCard = ({ deck, side, card }) => {
   const previousLink = document.createElement('a');
   previousLink.href = `/?deck=${deck}&side=a&card=${previousCard}`;
 
-  previousLink.appendChild(
-    document.createTextNode('Previous')
-  );
+  if (mode !== 'shuffled') {
+    previousLink.appendChild(
+      document.createTextNode('Previous')
+    );
+  }
 
   const nextLink = document.createElement('a');
-  nextLink.href = `/?deck=${deck}&side=a&card=${nextCard}`;
+  nextLink.href =
+    mode === 'shuffled'
+      ? `/?deck=${deck}&mode=shuffled`
+      : `/?deck=${deck}&side=a&card=${nextCard}`;
 
   nextLink.appendChild(
     document.createTextNode('Next')
@@ -71,7 +90,6 @@ const renderCard = ({ deck, side, card }) => {
   action.appendChild(previousLink);
   action.appendChild(flipLink);
   action.appendChild(nextLink);
-
 };
 
-export { renderCard };
+export { renderCard, renderShuffledCard };

@@ -46,13 +46,22 @@ const renderDeckList = () => {
 
     content.appendChild(body);
 
-    const actionLink = document.createElement('a');
-    actionLink.href = `/?deck=${deck.name}&side=a&card=0`;
+    const openLink = document.createElement('a');
+    openLink.href = `/?deck=${deck.name}&side=a&card=0`;
 
-    action.appendChild(actionLink);
+    action.appendChild(openLink);
 
-    actionLink.appendChild(
+    openLink.appendChild(
       document.createTextNode('Open Deck')
+    );
+
+    const openShuffledLink = document.createElement('a');
+    openShuffledLink.href = `/?deck=${deck.name}&mode=shuffled`;
+
+    action.appendChild(openShuffledLink);
+
+    openShuffledLink.appendChild(
+      document.createTextNode('Open Shuffled Deck')
     );
   });
 };

@@ -1,6 +1,6 @@
 import decks from './decks.json';
 import { renderDeckList } from './deckList';
-import { renderCard } from './card';
+import { renderCard, renderRandomCard } from './card';
 
 window.addEventListener('DOMContentLoaded', event => {
   const pieces = window.location.href.split('?');
@@ -16,7 +16,12 @@ window.addEventListener('DOMContentLoaded', event => {
     renderCard({
       deck: queryParams['deck'],
       side: queryParams['side'],
-      card: parseInt(queryParams['card'])
+      card: parseInt(queryParams['card']),
+      mode: queryParams['shuffled']
+    });
+  } else if ('mode' in queryParams && queryParams['mode'] === 'shuffled') {
+    renderShuffledCard({
+      deck: queryParams['deck']
     });
   } else {
     renderDeckList();
