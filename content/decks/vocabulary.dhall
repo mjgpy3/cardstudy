@@ -10,7 +10,6 @@ let deck : Deck = {
 , { sideA = "Dowager",   sideB = "(1) A widow who holds a title or property derived from her deceased husband (2) an elderly woman of high social station" }
 , { sideA = "Phalanx",   sideB = "A compact or close-knit body of people" }
 , { sideA = "Apropos",   sideB = "Fitting and to the point" }
-, { sideA = "Apropos",   sideB = "Fitting and to the point" }
 , { sideA = "Charabanc", sideB = "A bus typically used for sightseeing, originally open and pulled by horses" }
 , { sideA = "Dacha",     sideB = "A Russian country house or villa" }
   ]
