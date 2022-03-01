@@ -11,7 +11,7 @@
   "scripts": {
     "release": "rm -f dist/* && npm run build && rm -f docs/* && cp -r dist/* docs/",
     "build": "npm run build:content && npm run build:ui",
-    "build:ui": "parcel build --public-url mjgpy3.github.io/cardstudy index.html",
+    "build:ui": "parcel build --public-url https://mjgpy3.github.io/cardstudy index.html",
     "build:content": "./bin/dhall-to-json --file ./content/decks.dhall > ./js/decks.json"
   },
   "author": ""
