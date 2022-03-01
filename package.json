@@ -2,12 +2,12 @@
   "name": "cardstudy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {
-    "materialize-css": "^1.0.0-rc.2",
-    "parcel": "^1.12.3"
+    "materialize-css": "^1.0.0-rc.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  },
   "scripts": {
     "build": "npm run build:content && npm run build:ui",
     "build:ui": "parcel build --public-url dist index.html",
