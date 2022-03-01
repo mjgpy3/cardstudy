@@ -47,7 +47,7 @@ const renderDeckList = () => {
     content.appendChild(body);
 
     const openLink = document.createElement('a');
-    openLink.href = `/?deck=${deck.name}&side=a&card=0`;
+    openLink.href = `?deck=${deck.name}&side=a&card=0`;
 
     action.appendChild(openLink);
 
@@ -56,7 +56,7 @@ const renderDeckList = () => {
     );
 
     const openShuffledLink = document.createElement('a');
-    openShuffledLink.href = `/?deck=${deck.name}&mode=shuffled`;
+    openShuffledLink.href = `?deck=${deck.name}&mode=shuffled`;
 
     action.appendChild(openShuffledLink);
 

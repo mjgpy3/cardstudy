@@ -61,15 +61,15 @@ const renderCard = ({ deck, side, card, mode }) => {
   const flipLink = document.createElement('a');
   flipLink.href =
     mode === 'shuffled'
-      ? `/?deck=${deck}&side=${oppositeSide}&card=${card}&mode=shuffled`
-      : `/?deck=${deck}&side=${oppositeSide}&card=${card}`;
+      ? `?deck=${deck}&side=${oppositeSide}&card=${card}&mode=shuffled`
+      : `?deck=${deck}&side=${oppositeSide}&card=${card}`;
 
   flipLink.appendChild(
     document.createTextNode('Flip')
   );
 
   const previousLink = document.createElement('a');
-  previousLink.href = `/?deck=${deck}&side=a&card=${previousCard}`;
+  previousLink.href = `?deck=${deck}&side=a&card=${previousCard}`;
 
   if (mode !== 'shuffled') {
     previousLink.appendChild(
@@ -80,8 +80,8 @@ const renderCard = ({ deck, side, card, mode }) => {
   const nextLink = document.createElement('a');
   nextLink.href =
     mode === 'shuffled'
-      ? `/?deck=${deck}&mode=shuffled`
-      : `/?deck=${deck}&side=a&card=${nextCard}`;
+      ? `?deck=${deck}&mode=shuffled`
+      : `?deck=${deck}&side=a&card=${nextCard}`;
 
   nextLink.appendChild(
     document.createTextNode('Next')
