@@ -46,7 +46,7 @@ let deck : Deck = {
 , { sideA = "Gait",          sideB = "Rate of moving" }
 , { sideA = "Conflagration", sideB = "Uncontrollable, large fire" }
 , { sideA = "Hypostasis"   , sideB = "The substance or essential nature of an individual" }
-, { sideA = "Novation"     , sideB = "The substitution of a new legal obligation for a new one" }
+, { sideA = "Novation"     , sideB = "The substitution of a new legal obligation for an old one" }
 , { sideA = "Ineffable"    , sideB = "Incapable of being expressed in words" }
 , { sideA = "Equivocal"    , sideB = "Open to two or more interpretations and often intended to conceal the truth" }
 , { sideA = "Repudiate"    , sideB = "To reject the validity and authority of" }
