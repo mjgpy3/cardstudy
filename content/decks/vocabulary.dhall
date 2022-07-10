@@ -73,6 +73,14 @@ let deck : Deck = {
 , { sideA = "Sextant"      , sideB = "An instrument for measuring angular distances used especially in navigation to observe altitudes of celestial bodies (as in ascertaining latitude and longitude)" }
 , { sideA = "Forecastle"   , sideB = "The forward part of the upper deck of a ship" }
 , { sideA = "Ballast"      , sideB = "A heavy substance (such as rocks or water) placed in such a way as to improve stability and control (as of the draft of a ship or the buoyancy of a balloon or submarine)" }
+, { sideA = "Phalanstry"   , sideB = "Dwelling of a Foureirist community, or something resembling one" }
+, { sideA = "Cambric"      , sideB = "A fine thin white linen fabric, or cotton fabric resembling one" }
+, { sideA = "Craggletail"  , sideB = "To hang loosely, slouch" }
+, { sideA = "Crinoline"    , sideB = "An open-weave fabric of horsehair or cotton that is usually stiffened and used sepesically for interlinkings and millinery; (2) stiff skirt or underskirt made from the same" }
+, { sideA = "Pique"        , sideB = "A transient felling of wounded vainity - RESENTMENT - OFFENSE" }
+, { sideA = "Louse"        , sideB = "Lice" }
+, { sideA = "Vestal"       , sideB = "of or realting to the Roman goddess Vesta; (2) of or relating to a vestal virgin - CHASTE" }
+, { sideA = "Galling"      , sideB = "irritating" }
   ]
 }
 
